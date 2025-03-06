@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenBIM App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .ifcjs-dimension-label {
+      background-color: #4ADEBB !important;
+      font-family: sans-serif;
+      color: white;
+      padding: 8px;
+      border-radius: 50%;
+      pointer-events: all;
+      transition: background-color 200ms ease-in-out;
+    }
+
+    .ifcjs-dimension-label:hover {
+      background-color: grey;
+    }
+
+    .ifcjs-dimension-preview {
+      background-color: #4ADEBB;
+      width: 2rem;
+      height: 2rem;
+      opacity: 0.3;
+      padding: 8px;
+      border-radius: 100%;
+    }
+
+    .square_marker {
+      height: 0.6em;
+      width: 0.6em;
+      border: 2px solid #CDCD04;
+      pointer-events: "none";
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* html,
+    body,
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .btn-container {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    .btn-container button {
+      margin-right: 10px;
+    } */
+
+    /* .w-2.h-2.bg-red-600.rounded-full {
+      height: 0.6em !important;
+      width: 0.6em !important;
+      border: 2px solid #CDCD04 !important;
+      pointer-events: "none" !important;
+      background-color: transparent !important;
+      border-radius: 0 !important;
+    } */
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div style="width: 100vw; height: 100vh;" id="container"></div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
